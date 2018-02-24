@@ -5,15 +5,15 @@ from PIL import Image, ImageDraw, ImageFont
 import json
 
 # set up congnitive_face
-KEY = 'df1f5ec6fd2f417486df8372b4f3fa1b'  
+KEY = 'you own key'  
 CF.Key.set(KEY)
 
-BASE_URL = 'https://southcentralus.api.cognitive.microsoft.com/face/v1.0/'  # Replace with your regional Base URL
+BASE_URL = 'your azure face api url'  # Replace with your regional Base URL
 CF.BaseUrl.set(BASE_URL)
 
 # set up the url of th e group picture
-group_img_url = 'https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/21231822_1426449027450252_8407870731039537619_n.jpg?oh=1da059fd8453ea18fa3764b5d90090bf&oe=5B18E601'
-#group_img_url = 'https://i.imgur.com/4UvEUGk.jpg'
+group_img_url = 'url of your own group picture'
+#group_img_url = 'url of your own group picture'
 
 
 faces = CF.face.detect(group_img_url)
@@ -52,8 +52,8 @@ for face in faces:
 img_url = list()
 for i in range(2):
 	img_url.append('')
-img_url[0] = {'picture_url': 'https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/20245535_662274280629921_284773622154778063_n.jpg?oh=d5086c717f3b9d95ec02b25b19bd43cb&oe=5B18F36E', 'name': 'Hsiao'} #蕭
-img_url[1] = {'picture_url': 'https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/19895089_1537994202942314_1959082939706512724_n.jpg?oh=97c961d8eea01d740682a9ce5dda79c6&oe=5B07341C', 'name': 'Huang'} #黃
+img_url[0] = {'picture_url': 'url of your friend picture', 'name': 'friend name'} 
+img_url[1] = {'picture_url': 'url of your friend picture', 'name': 'friend name'} 
 
 # use CF to get the faceID of dataset
 dataset_detect = list()

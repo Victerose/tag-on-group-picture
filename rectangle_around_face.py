@@ -5,15 +5,15 @@ from PIL import Image, ImageDraw, ImageFont
 import json
 
 # set up congnitive_face
-KEY = 'df1f5ec6fd2f417486df8372b4f3fa1b'  
+KEY = 'you own key'  
 CF.Key.set(KEY)
 
-BASE_URL = 'https://southcentralus.api.cognitive.microsoft.com/face/v1.0/'  
+BASE_URL = 'you face api url'  
 CF.BaseUrl.set(BASE_URL)
 
 # set up the url of th e group picture
-group_img_url = 'https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/21231822_1426449027450252_8407870731039537619_n.jpg?oh=1da059fd8453ea18fa3764b5d90090bf&oe=5B18E601'
-#group_img_url = 'https://i.imgur.com/4UvEUGk.jpg'
+group_img_url = 'url of your own group picture'
+#group_img_url = 'url of your own group picture'
 
 
 faces = CF.face.detect(group_img_url)
